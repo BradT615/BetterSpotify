@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpotifyAPI</title>
     <link rel="stylesheet" href="output.css">
+    <script src="app.js"></script>
 </head>
-<body>
-    <h1 class="bg-slate-400">Better Spotify</h1>
+<body onload="onPageLoad()">
+
+
+        <div id="tokenSection" class="flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2">
+                <div class="mb-3">
+                    <label for="clientId" class="block text-sm font-medium text-gray-700">Client ID</label>
+                    <input type="text" class="mt-1 bg-slate-600 rounded-md w-full" id="clientId" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="clientSecret" class="block text-sm font-medium text-gray-700">Client Secret</label>
+                    <input type="text" class="mt-1 bg-slate-600 rounded-md w-full" id="clientSecret" placeholder="">
+                </div>
+                <input class="mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button" onclick="requestAuthorization()" value="Request Authorization"><br/>
+            </div>
+        </div>
+      
+
+
 </body>
 </html>
